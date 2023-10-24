@@ -5,7 +5,7 @@ So what I did was create PreventTP, just changes up the normal tp command. You c
 
 Original [Concept](https://www.spigotmc.org/resources/new-teleportation-1-10-15-2-bug-fixed.74606/)
 
-![Example](https://github.com/SnubbyOWO/PreventTP/assets/87741849/9d59d523-1b3b-4947-979f-74a76a4f30cc)
+![Example](https://github.com/SnubbyOWO/PreventTP/blob/main/example.gif?raw=true)
 
 ## Commands
 
