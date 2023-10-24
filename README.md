@@ -1,7 +1,7 @@
 # PreventTP
 A teleport plugin for 1.10/1.10.2 that only allows teleporting to others.
 This was made for my MC server that allows tp's but the issue with the normal tp command is you can tp others and I didnt want that.
-So what I did was create PreventTP, just changes up the normal tp command.
+So what I did was create PreventTP, just changes up the normal tp command. You can download it [here.](https://github.com/SnubbyOWO/PreventTP/raw/main/build/PreventTP.jar)
 
 Original [Concept](https://www.spigotmc.org/resources/new-teleportation-1-10-15-2-bug-fixed.74606/)
 
