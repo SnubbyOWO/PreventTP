@@ -1,0 +1,13 @@
+# Messages
+cant_find_player: '&7Player not found.'
+teleported_message: '&7Teleported.'
+teleport_specify: '&7Please specify a player. /tp <player>'
+reloaded_message: '&7Reloaded configuration file'
+no_mr_perez: '&7You cannot teleport others man.. come on.. /tp <player>'
+no_permission: '&7You do not have permission use this command.'
+
+
+# Perms
+reload_permission: 'snubs.tpreload'
+permission_admin_tp: 'snubs.admin'
+permission_tp: 'snubs.tp'
