@@ -34,6 +34,9 @@ config.yml
   permission_tp: 'snubs.tp'
 ```
 
+## Updates? 
+no.
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
