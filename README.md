@@ -3,6 +3,8 @@ A teleport plugin for 1.10/1.10.2 that only allows teleporting to others.
 This was made for my MC server that allows tp's but the issue with the normal tp command is you can tp others and I didnt want that.
 So what I did was create PreventTP, just changes up the normal tp command.
 
+![Example](https://github.com/SnubbyOWO/PreventTP/assets/87741849/9d59d523-1b3b-4947-979f-74a76a4f30cc)
+
 ## Commands
 
 - tp <player> = Limits the normal teleport command to only allow the player to tp to someone else.
