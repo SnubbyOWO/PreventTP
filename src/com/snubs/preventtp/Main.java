@@ -20,7 +20,7 @@ public class Main extends JavaPlugin {
 
   public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 	  
-	// Checks Player  
+	  // Checks Player  
     Player player = (Player) sender;
     
     // Makes it where you can add players to the torture list.
@@ -52,7 +52,7 @@ public class Main extends JavaPlugin {
     	  Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&', getConfig().getString("callout_mr_perez").replace("%Player%", player.getName())));
     	  
     	  // Returns everything. Telling the game its done running.
-          return true;
+        return true;
       }
       
       // Can't find the player
@@ -64,7 +64,7 @@ public class Main extends JavaPlugin {
       
       // Teleported Player... unless?
       for (String arg : args) {
-    	  // ------- I was lazy and GPT made this line of code -------
+    	    // ------- I was lazy and GPT made this line of code -------
           if (blacklistplayers.stream().anyMatch(blacklistPlayer -> blacklistPlayer.equalsIgnoreCase(arg))) {
           // ---------------------------------------------------------
               player.sendMessage(ChatColor.translateAlternateColorCodes('&', getConfig().getString("blacklist_message")));
@@ -73,8 +73,8 @@ public class Main extends JavaPlugin {
         	  player.teleport((Entity) target);
         	  
         	  // Changes message to display names
-              player.sendMessage(ChatColor.translateAlternateColorCodes('&', getConfig().getString("teleported_message").replace("%Player%", args[0])));
-              return true;
+            player.sendMessage(ChatColor.translateAlternateColorCodes('&', getConfig().getString("teleported_message").replace("%Player%", args[0])));
+            return true;
           }
        }
      }
