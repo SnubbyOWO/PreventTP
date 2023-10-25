@@ -1,14 +1,16 @@
 # Messages
 cant_find_player: '&7Player not found.'
 teleported_message: '&7Teleported to %Player%'
-teleported_message_admin: '&7Teleported %Player% to %Player2%.'
 teleport_specify: '&7Please specify a player. /tp <player>'
 reloaded_message: '&7Reloaded configuration file'
 no_mr_perez: '&7You cannot teleport others man.. come on.. /tp <player>'
 no_permission: '&7You do not have permission use this command.'
+added_player: '&7Added %Player% to the list.'
+punish_add_player: '&7You mean /tppunish <player> right?'
+player_already_in_list: '&7Player is already in the list.'
+blacklist_message: '&7You cannot teleport to this player ;)'
 
 # Call out Perez
-
 callout_mr_perez: '&7&l&nCmon %Player%, you cant teleport others! Learn not to abuse this power!'
 
 # Perms
@@ -19,4 +21,7 @@ permission_tp: 'snubs.tp'
 # Torture Players
 players:
    - "OG_Perez"
-   # - "Player2" add more players here
+
+# Players who can't be tp'd to
+blacklist:
+   - "Snubs"

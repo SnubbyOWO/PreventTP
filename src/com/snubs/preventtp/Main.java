@@ -26,7 +26,12 @@ public class Main extends JavaPlugin {
     // Makes it where you can add players to the torture list.
     List<String> tortureList = getConfig().getStringList("players");
     
+    // Makes it where you can add players to the torture list.
+    List<String> blacklistplayers = getConfig().getStringList("blacklist");
+    
     if (cmd.getName().equalsIgnoreCase("tp") && player.hasPermission(getConfig().getString("permission_tp"))) {
+    	
+      // Specify player
       if (args.length == 0) {
         player.sendMessage(ChatColor.translateAlternateColorCodes('&', getConfig().getString("teleport_specify")));
         return true;
@@ -50,17 +55,29 @@ public class Main extends JavaPlugin {
           return true;
       }
       
-
+      // Can't find the player
       Player target = Bukkit.getServer().getPlayer(args[0]);
       if (target == null) {
         player.sendMessage(ChatColor.translateAlternateColorCodes('&', getConfig().getString("cant_find_player")));
         return true;
       }
       
-      player.teleport((Entity) target);
-      player.sendMessage(ChatColor.translateAlternateColorCodes('&', getConfig().getString("teleported_message").replace("%Player%", player.getName())));
-      return true;
-    }
+      // Teleported Player... unless?
+      for (String arg : args) {
+    	  // ------- I was lazy and GPT made this line of code -------
+          if (blacklistplayers.stream().anyMatch(blacklistPlayer -> blacklistPlayer.equalsIgnoreCase(arg))) {
+          // ---------------------------------------------------------
+              player.sendMessage(ChatColor.translateAlternateColorCodes('&', getConfig().getString("blacklist_message")));
+              return true;
+          } else {
+        	  player.teleport((Entity) target);
+        	  
+        	  // Changes message to display names
+              player.sendMessage(ChatColor.translateAlternateColorCodes('&', getConfig().getString("teleported_message").replace("%Player%", args[0])));
+              return true;
+          }
+       }
+     }
 
     if (cmd.getName().equalsIgnoreCase("tpn") && player.hasPermission(getConfig().getString("permission_admin_tp"))) {
       if (args.length != 2) {
@@ -79,7 +96,7 @@ public class Main extends JavaPlugin {
       player1.teleport((Entity) player2);
       
       // Changes message to display names
-      player.sendMessage(ChatColor.translateAlternateColorCodes('&', getConfig().getString("teleported_message_admin").replace("%Player%", player.getName().replace("%Player2%", player2.getName()))));
+      player.sendMessage(ChatColor.translateAlternateColorCodes('&', getConfig().getString("teleported_message").replace("%Player%", args[1])));
       return true;
     }
 
