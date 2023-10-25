@@ -26,7 +26,7 @@ public class Main extends JavaPlugin {
     // Makes it where you can add players to the torture list.
     List<String> tortureList = getConfig().getStringList("players");
     
-    // Makes it where you can add players to the torture list.
+    // Makes it where you can add players to the blacklist.
     List<String> blacklistplayers = getConfig().getStringList("blacklist");
     
     if (cmd.getName().equalsIgnoreCase("tp") && player.hasPermission(getConfig().getString("permission_tp"))) {
